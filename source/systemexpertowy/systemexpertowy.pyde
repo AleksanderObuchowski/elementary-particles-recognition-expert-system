@@ -6,10 +6,10 @@ def setup():
 
     for i in range(0,34):
         t.append(0)
-        
+
     for i in range(0,22):
-        matches.append(0)    
-    
+        matches.append(0)
+
 data = ['X is indivisible',                             #0
         'X is divisible',                               #1
 
@@ -48,10 +48,10 @@ data = ['X is indivisible',                             #0
         'X ia a quark d',                               #27
         'X is a quark s',                               #28
         'X is a quark b',                               #29
-                
+
         'X is a Gauge boson',                           #30
         'X is a Higgs boson',                           #31
-        
+
         'X has 0-value spin',                            #32
         'X has positive spin']                          #33
 def draw():
@@ -86,13 +86,13 @@ def draw():
     rect(60,600,100,30)
     fill(255)
     text("restart",85,620)
-    
-    
+
+
 def system():
     czy_juz_wszystko=0                                      #Zmienna warunkująca koniec programu
 
     while(czy_juz_wszystko==0):
-    
+
         if(t[0]==1):                                        #Sprawdzanie, które zasady są 1 - Matching
             if(matches[0]==0):
                 matches[0]=1
@@ -117,7 +117,7 @@ def system():
         if(t[19]==1):
             if(matches[7]==0):
                 matches[7]=1
-        if((t[5]==1) and (t[14]==1)):
+        if((t[5]==1) and (t[14]==1) and (t[0]==1)):
             if(matches[8]==0):
                 matches[8]=1
         if((t[18]==1) and (t[8]==1) and (t[9]==1)):
@@ -158,7 +158,7 @@ def system():
                 matches[20]=1
         if((t[15]==1) and ((t[7]==1) or (t[8]==1))):
             if(matches[21]==0):
-                matches[21]=1                               
+                matches[21]=1
 
         for i in range(0,22):
             if((i==21) and (matches[i]!=1)):                             #Jeśli przeszedłem przez wszystko matches i nie został żaden do odpalenia, to daję warunek kończący
@@ -233,13 +233,13 @@ def system():
             matches[20]=2
         if(matches[21]==3):
             t[30]=1
-            matches[21]=2                                   
+            matches[21]=2
     j=0
     for i in range(0,34):                                    #Wypisanie, co wiemy
         if(t[i]==1):
             text(data[i],750,80+j)
             j+=30
-        
+
 def kwadraciki(startX,startY,startNum,endNum):
      stroke(255)
      for i in range (startNum-1,endNum):
