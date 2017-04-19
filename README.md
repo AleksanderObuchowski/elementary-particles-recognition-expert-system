@@ -1,6 +1,6 @@
 # elementry-particles-recognition-expert-system
 
-	This is a program build a as high school project. 
+	This is a program build as a high school project. 
 	Based on the information provided it recognises the properties of a given elementary particle.
 	Whenever it is possible, it determines which particle is taken into consideration.
 	
